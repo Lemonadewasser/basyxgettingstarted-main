@@ -1,0 +1,394 @@
+{
+  "idShort": "ProductSubmodel",
+  "identification": {
+    "idType": "IRI",
+    "id": "ProductSubmodel"
+  },
+  "dataSpecification": [],
+  "embeddedDataSpecifications": [],
+  "modelType": {
+    "name": "Submodel"
+  },
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "ProductClassification",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "ECLASS",
+          "valueType": "string",
+          "idShort": "ProductClassificationSystem",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProductClassification",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "9.0",
+          "valueType": "string",
+          "idShort": "ClassificationSystemVersion",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProductClassification",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "07-02",
+          "valueType": "string",
+          "idShort": "ProductClassID",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProductClassification",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProductSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "TechnicalProperties",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Steel",
+          "valueType": "string",
+          "idShort": "Material",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "TechnicalProperties",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Young's",
+          "valueType": "string",
+          "idShort": "Deformability",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "TechnicalProperties",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProductSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "GeometryInformation",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 1.0,
+          "valueType": "double",
+          "idShort": "Height",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "GeometryInformation",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 1.0,
+          "valueType": "double",
+          "idShort": "Width",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "GeometryInformation",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 3.0,
+          "valueType": "double",
+          "idShort": "Length",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "GeometryInformation",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "path",
+          "valueType": "string",
+          "idShort": "3DModel",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "GeometryInformation",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "m",
+          "valueType": "string",
+          "idShort": "UnitsOfMeasurement",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "GeometryInformation",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProductSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "Capability",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Shape",
+          "valueType": "string",
+          "idShort": "Name",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Capability",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Two planes perpendicular to each other",
+          "valueType": "string",
+          "idShort": "Description",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Capability",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 90.0,
+          "valueType": "double",
+          "idShort": "InputParameters",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Capability",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 88.8,
+          "valueType": "double",
+          "idShort": "OutputParameters",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Capability",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Deforming(the taskSMC in later part)",
+          "valueType": "string",
+          "idShort": "SupportedProcess",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Capability",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProductSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    }
+  ],
+  "parent": {
+    "keys": [
+      {
+        "type": "AssetAdministrationShell",
+        "local": true,
+        "value": "TestProductAAS",
+        "idType": "Custom"
+      }
+    ]
+  }
+}

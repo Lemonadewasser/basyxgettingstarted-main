@@ -1,0 +1,911 @@
+{
+  "idShort": "ProcessSubmodel",
+  "identification": {
+    "idType": "IRI",
+    "id": "ProcessSubmodel"
+  },
+  "dataSpecification": [],
+  "embeddedDataSpecifications": [],
+  "modelType": {
+    "name": "Submodel"
+  },
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "ProcessStep1",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Deforming1",
+          "valueType": "string",
+          "idShort": "ProcessName",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 1,
+          "valueType": "int",
+          "idShort": "ProcessID",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Deforming a sheet1",
+          "valueType": "string",
+          "idShort": "ProcessDescription",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Robot",
+          "valueType": "string",
+          "idShort": "ProcessResource",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Done in 2 mins1",
+          "valueType": "string",
+          "idShort": "ProcessConstraints",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "change the shape to meet the specification1",
+          "valueType": "string",
+          "idShort": "ProcessCapability",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Gripping",
+          "value": [
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(1,2,3)",
+              "valueType": "string",
+              "idShort": "TaskPosition",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(1,2,3)",
+              "valueType": "string",
+              "idShort": "TaskOrientation",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": 4.0,
+              "valueType": "double",
+              "idShort": "TaskVelocity",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": true,
+              "valueType": "boolean",
+              "idShort": "TaskInputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": true,
+              "valueType": "boolean",
+              "idShort": "TaskOutputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Gripper",
+              "valueType": "string",
+              "idShort": "TaskResource",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Done firstly",
+              "valueType": "string",
+              "idShort": "TaskConstraints",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Gripping",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Moving",
+          "value": [
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(2,3,4)",
+              "valueType": "string",
+              "idShort": "TaskPosition",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(2,3,4)",
+              "valueType": "string",
+              "idShort": "TaskOrientation",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": 5.0,
+              "valueType": "double",
+              "idShort": "TaskVelocity",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": false,
+              "valueType": "boolean",
+              "idShort": "TaskInputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": false,
+              "valueType": "boolean",
+              "idShort": "TaskOutputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Mover",
+              "valueType": "string",
+              "idShort": "TaskResource",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Done secondly",
+              "valueType": "string",
+              "idShort": "TaskConstraints",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Moving",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep1",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProcessSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "ProcessStep2",
+      "value": [
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Deforming2",
+          "valueType": "string",
+          "idShort": "ProcessName",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": 2,
+          "valueType": "int",
+          "idShort": "ProcessID",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Deforming a sheet2",
+          "valueType": "string",
+          "idShort": "ProcessDescription",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Gripper",
+          "valueType": "string",
+          "idShort": "ProcessResource",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "Done in 3 mins2",
+          "valueType": "string",
+          "idShort": "ProcessConstraints",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "Property"
+          },
+          "kind": "Instance",
+          "value": "change the shape to meet the specification2",
+          "valueType": "string",
+          "idShort": "ProcessCapability",
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Heating",
+          "value": [
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(3,4,5)",
+              "valueType": "string",
+              "idShort": "TaskPosition",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(3,4,5)",
+              "valueType": "string",
+              "idShort": "TaskOrientation",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": 6.0,
+              "valueType": "double",
+              "idShort": "TaskVelocity",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": false,
+              "valueType": "boolean",
+              "idShort": "TaskInputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": false,
+              "valueType": "boolean",
+              "idShort": "TaskOutputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Heater",
+              "valueType": "string",
+              "idShort": "TaskResource",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Done thirdly",
+              "valueType": "string",
+              "idShort": "TaskConstraints",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Heating",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Pressing",
+          "value": [
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(4,5,6)",
+              "valueType": "string",
+              "idShort": "TaskPosition",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "(4,5,6)",
+              "valueType": "string",
+              "idShort": "TaskOrientation",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": 7.0,
+              "valueType": "double",
+              "idShort": "TaskVelocity",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": true,
+              "valueType": "boolean",
+              "idShort": "TaskInputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": true,
+              "valueType": "boolean",
+              "idShort": "TaskOutputParameter",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Presser",
+              "valueType": "string",
+              "idShort": "TaskResource",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "Done finally",
+              "valueType": "string",
+              "idShort": "TaskConstraints",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Pressing",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "ProcessStep2",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ProcessSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    }
+  ],
+  "parent": {
+    "keys": [
+      {
+        "type": "AssetAdministrationShell",
+        "local": true,
+        "value": "TestProcessAAS",
+        "idType": "Custom"
+      }
+    ]
+  }
+}
