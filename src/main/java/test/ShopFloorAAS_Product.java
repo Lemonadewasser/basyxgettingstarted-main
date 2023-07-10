@@ -41,37 +41,40 @@ public class ShopFloorAAS_Product {
 
     // required objects for the properties
     public double value;
-    public String classificationSystem;
-    public String classificationSystemVersion;
-    public String classId;
+    public List<String> classificationSystems;
+    public List<String> classificationSystemVersions;
+    public List<String> classIds;
+
     public String material;
     public String deformability;
     public List<Double> dimensions;
     public String pathOfModel;
     public String unitsOfMeasurement;
     public String name;
-    public String discription;
+    public String description;
     public double inputParameters;
     public double outputParameters;
     public String supportedTask;
 
 
 
-    public ShopFloorAAS_Product(double value, String classificationSystem, String classificationSystemVersion, String classId, String material,
-    String deformability, List<Double> dimensions, String pathOfModel, String unitsOfMeasurement,String name, String discription,
+    public ShopFloorAAS_Product(double value, List<String> classificationSystems, 
+    List<String> classificationSystemVersions, List<String> classIds, 
+    String material, String deformability, List<Double> dimensions, 
+    String pathOfModel, String unitsOfMeasurement,String name, String description,
     double inputParameters, double outputParameters, String supportedTask){
 
         this.value = value;
-        this.classificationSystem = classificationSystem;
-        this.classificationSystemVersion = classificationSystemVersion;
-        this.classId = classId;
+        this.classificationSystems = classificationSystems;
+        this.classificationSystemVersions = classificationSystemVersions;
+        this.classIds = classIds;
         this.material = material;
         this.deformability = deformability;
         this.dimensions = dimensions;
         this.pathOfModel = pathOfModel;
         this.unitsOfMeasurement = unitsOfMeasurement;
         this.name = name;
-        this.discription = discription;
+        this.description = description;
         this.inputParameters = inputParameters;
         this.outputParameters = outputParameters;
         this.supportedTask = supportedTask;
@@ -88,23 +91,52 @@ public class ShopFloorAAS_Product {
         SubmodelElementCollection productClassificationSubmodelCollection = new SubmodelElementCollection("ProductClassification");
 
         // all properties in product classification
-        // 1.1 product classification system
-        Property productClassificationSystemProperty = new Property();
-        productClassificationSystemProperty.setIdShort("ProductClassificationSystem");
-        productClassificationSystemProperty.setValue(this.classificationSystem);
-        productClassificationSubmodelCollection.addSubmodelElement(productClassificationSystemProperty);
 
-        // 1.2 classification system version
-        Property classificationSystemVersionProperty = new Property();
-        classificationSystemVersionProperty.setIdShort("ClassificationSystemVersion");
-        classificationSystemVersionProperty.setValue(this.classificationSystemVersion);
-        productClassificationSubmodelCollection.addSubmodelElement(classificationSystemVersionProperty);
+        //1.1 SMC product classification item 1
+        SubmodelElementCollection productClassificationItem1 = new SubmodelElementCollection("ProductClassificationItem1");
 
-        // 1.3 product class id
-        Property productClassIdProperty = new Property();
-        productClassIdProperty.setIdShort("ProductClassID");
-        productClassIdProperty.setValue(this.classId);
-        productClassificationSubmodelCollection.addSubmodelElement(productClassIdProperty);
+        // 1.1.1 product classification system 1
+        Property productClassificationSystem1 = new Property();
+        productClassificationSystem1.setIdShort("ProductClassificationSystem1");
+        productClassificationSystem1.setValue(this.classificationSystems.get(0));
+        productClassificationItem1.addSubmodelElement(productClassificationSystem1);
+
+        // 1.1.2 classification system version 1
+        Property productClassificationSystemVersion1 = new Property();
+        productClassificationSystemVersion1.setIdShort("ProductClassificationSystemVersion1");
+        productClassificationSystemVersion1.setValue(this.classificationSystems.get(0));
+        productClassificationItem1.addSubmodelElement(productClassificationSystemVersion1);
+
+        // 1.1.3 product class id 1
+        Property productClassID1 = new Property();
+        productClassID1.setIdShort("ProductClassID1");
+        productClassID1.setValue(this.classificationSystems.get(0));
+        productClassificationItem1.addSubmodelElement(productClassID1);
+
+        productClassificationSubmodelCollection.addSubmodelElement(productClassificationItem1);
+
+        //      1.2.2.2 SMC product classification item 2
+        SubmodelElementCollection productClassificationItem2 = new SubmodelElementCollection("ProductClassificationItem2");
+
+        //          1.2.2.2.1 Property product classification system 2
+        Property productClassificationSystem2 = new Property();
+        productClassificationSystem2.setIdShort("ProductClassificationSystem2");
+        productClassificationSystem2.setValue(this.classificationSystems.get(1));
+        productClassificationItem2.addSubmodelElement(productClassificationSystem2);
+
+        //          1.2.2.2.2 Property classification system version 2
+        Property productClassificationSystemVersion2 = new Property();
+        productClassificationSystemVersion2.setIdShort("ProductClassificationSystemVersion2");
+        productClassificationSystemVersion2.setValue(this.classificationSystems.get(1));
+        productClassificationItem2.addSubmodelElement(productClassificationSystemVersion2);
+
+        //          1.2.2.2.3 Property product class id 2
+        Property productClassID2 = new Property();
+        productClassID2.setIdShort("ProductClassID2");
+        productClassID2.setValue(this.classificationSystems.get(1));
+        productClassificationItem2.addSubmodelElement(productClassID2);
+
+        productClassificationSubmodelCollection.addSubmodelElement(productClassificationItem2);
 
         // 2.SMC technical properties
         SubmodelElementCollection technicalPropertiesSubmodelCollection = new SubmodelElementCollection("TechnicalProperties");
@@ -166,7 +198,7 @@ public class ShopFloorAAS_Product {
         // 4.2 Description
         Property descriptionProperty = new Property();
         descriptionProperty.setIdShort("Description");
-        descriptionProperty.setValue(this.discription);
+        descriptionProperty.setValue(this.description);
         capabilitySubmodelElementCollection.addSubmodelElement(descriptionProperty);
 
         // 4.3 Input parameters
@@ -305,9 +337,14 @@ public class ShopFloorAAS_Product {
 
 		// create SimpleAAS object for easy storage of the product data for all
 		// submodels
-		ShopFloorAAS_Product generator = new ShopFloorAAS_Product(0, "ECLASS", "9.0", "07-02", "Steel", "Young's",
-        List.of(1.0, 1.0, 3.0), "path", "m", "Shape", "Two planes perpendicular to each other", 
-		90.0, 88.8, "Deforming(the taskSMC in later part)");
+		ShopFloorAAS_Product generator = new ShopFloorAAS_Product(0, 
+        List.of("ECLASS1","ECLASS2"), List.of("9.0","10.0"), 
+        List.of("02-07", "51-10"), "Steel", 
+        "Young's", List.of(1.0, 1.0, 3.0), 
+        "path", "m", "Shape",
+        "Two planes perpendicular to each other", 
+		90.0, 88.8,
+        "Deforming(the taskSMC in later part)");
 
 		List<Submodel> submodels = generateAndRegisterSubmodels(productShell, generator);
 
