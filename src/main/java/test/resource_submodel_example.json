@@ -1,0 +1,1890 @@
+{
+  "idShort": "ResourceSubmodel",
+  "identification": {
+    "idType": "IRI",
+    "id": "ResourceSubmodel"
+  },
+  "dataSpecification": [],
+  "embeddedDataSpecifications": [],
+  "modelType": {
+    "name": "Submodel"
+  },
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "Robot",
+      "value": [
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Documentation",
+          "value": [
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Document1",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "12345",
+                  "valueType": "string",
+                  "idShort": "DocumentID",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "03-02",
+                  "valueType": "string",
+                  "idShort": "DocumentClassID",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Operation1",
+                  "valueType": "string",
+                  "idShort": "DocumentClassName",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": true,
+                  "valueType": "boolean",
+                  "idShort": "IsPrimary",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "VDI2770",
+                  "valueType": "string",
+                  "idShort": "DocumentClassificationSystem",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "DocumentVersion",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "en",
+                      "valueType": "string",
+                      "idShort": "Language",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "V1.3",
+                      "valueType": "string",
+                      "idShort": "DocumentVersionId",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "path of doc",
+                      "valueType": "string",
+                      "idShort": "Title",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Documentation",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Document2",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "23456",
+                  "valueType": "string",
+                  "idShort": "DocumentID",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "04-03",
+                  "valueType": "string",
+                  "idShort": "DocumentClassID",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Operation2",
+                  "valueType": "string",
+                  "idShort": "DocumentClassName",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": false,
+                  "valueType": "boolean",
+                  "idShort": "IsPrimary",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "VDI2771",
+                  "valueType": "string",
+                  "idShort": "DocumentClassificationSystem",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "DocumentVersion",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "de",
+                      "valueType": "string",
+                      "idShort": "Language",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "V3.5",
+                      "valueType": "string",
+                      "idShort": "DocumentVersionId",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "path of doc2",
+                      "valueType": "string",
+                      "idShort": "Title",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "DocumentVersion",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Document2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Documentation",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Robot",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "TechnicalInforamtion",
+          "value": [
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "GeneralInformation",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "ABC Company",
+                  "valueType": "string",
+                  "idShort": "ManufacturerName",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "path of png",
+                  "valueType": "string",
+                  "idShort": "ManufacturerLogo",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "ABC Ronot",
+                  "valueType": "string",
+                  "idShort": "ManufacturerProductDesignation",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "dfsdf-sdg",
+                  "valueType": "string",
+                  "idShort": "ManufacturerOrderCode",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "path of jpg",
+                  "valueType": "string",
+                  "idShort": "ManufacturerImage",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "Position",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 1.0,
+                      "valueType": "double",
+                      "idShort": "Position_x",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Position",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 2.0,
+                      "valueType": "double",
+                      "idShort": "Position_y",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Position",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 3.0,
+                      "valueType": "double",
+                      "idShort": "Position_z",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Position",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalInforamtion",
+                        "idType": "IdShort"
+                      },
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "Orientation",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 5.0,
+                      "valueType": "double",
+                      "idShort": "Orientation_x",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Orientation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 6.0,
+                      "valueType": "double",
+                      "idShort": "Orientation_y",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Orientation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 7.0,
+                      "valueType": "double",
+                      "idShort": "Orientation_z",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Orientation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalInforamtion",
+                        "idType": "IdShort"
+                      },
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "GeneralInformation",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "TechnicalInforamtion",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "ProductClassification",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "ProductClassificationItem1",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class1",
+                      "valueType": "string",
+                      "idShort": "ProductClassificationSystem1",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem1",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class1",
+                      "valueType": "string",
+                      "idShort": "ProductClassificationSystemVersion1",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem1",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class1",
+                      "valueType": "string",
+                      "idShort": "ProductClassID1",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem1",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "ProductClassification",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "ProductClassificationItem2",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class2",
+                      "valueType": "string",
+                      "idShort": "ProductClassificationSystem2",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem2",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class2",
+                      "valueType": "string",
+                      "idShort": "ProductClassificationSystemVersion2",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem2",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Class2",
+                      "valueType": "string",
+                      "idShort": "ProductClassID2",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "ProductClassificationItem2",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "ProductClassification",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "TechnicalInforamtion",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "TechnicalProperties",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "Actuator",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": "Electric Motor",
+                      "valueType": "string",
+                      "idShort": "ActuatorType",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Actuator",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 8.9,
+                      "valueType": "double",
+                      "idShort": "TorqueAndForce",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "Actuator",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalProperties",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Automated",
+                  "valueType": "string",
+                  "idShort": "ControlSystem",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalProperties",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 20.6,
+                  "valueType": "double",
+                  "idShort": "PowerRequirements",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalProperties",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 98.6,
+                  "valueType": "double",
+                  "idShort": "SpeedAndAcceleration",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalProperties",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 0.01,
+                  "valueType": "double",
+                  "idShort": "Precision",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "TechnicalProperties",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "TechnicalInforamtion",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Robot",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "GeometryInformation",
+          "value": [
+            {
+              "modelType": {
+                "name": "Property"
+              },
+              "kind": "Instance",
+              "value": "path of .STEP",
+              "valueType": "string",
+              "idShort": "Robot3DModel",
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "GeometryInformation",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Dimensions",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 1.0,
+                  "valueType": "double",
+                  "idShort": "Height",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Dimensions",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 2.0,
+                  "valueType": "double",
+                  "idShort": "Width",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Dimensions",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 3.0,
+                  "valueType": "double",
+                  "idShort": "Length",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Dimensions",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 4.0,
+                  "valueType": "double",
+                  "idShort": "Weight",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Dimensions",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 6.0,
+                  "valueType": "double",
+                  "idShort": "DegreesOfFreedom",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Dimensions",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "GeometryInformation",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Configuration",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "path of jpg",
+                  "valueType": "string",
+                  "idShort": "Linkstructure",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "revolute",
+                  "valueType": "string",
+                  "idShort": "JointType",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "SubmodelElementCollection"
+                  },
+                  "kind": "Instance",
+                  "idShort": "AxisOfRotation",
+                  "value": [
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 1.1,
+                      "valueType": "double",
+                      "idShort": "Rotation_x",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "AxisOfRotation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 2.2,
+                      "valueType": "double",
+                      "idShort": "Rotation_y",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "AxisOfRotation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "modelType": {
+                        "name": "Property"
+                      },
+                      "kind": "Instance",
+                      "value": 3.3,
+                      "valueType": "double",
+                      "idShort": "Rotation_z",
+                      "parent": {
+                        "keys": [
+                          {
+                            "type": "SubmodelElementCollection",
+                            "local": true,
+                            "value": "AxisOfRotation",
+                            "idType": "IdShort"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "ordered": true,
+                  "allowDuplicates": true,
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 10.0,
+                  "valueType": "double",
+                  "idShort": "GripperSize",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 9.0,
+                  "valueType": "double",
+                  "idShort": "GripperOpeningWidth",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 10.0,
+                  "valueType": "double",
+                  "idShort": "GrippingForce",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 15.0,
+                  "valueType": "double",
+                  "idShort": "FingerLength",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 5,
+                  "valueType": "int",
+                  "idShort": "NumberOfFingers",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Configuration",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "GeometryInformation",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Robot",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        },
+        {
+          "modelType": {
+            "name": "SubmodelElementCollection"
+          },
+          "kind": "Instance",
+          "idShort": "Capability",
+          "value": [
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Capability1",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving1",
+                  "valueType": "string",
+                  "idShort": "Name",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving1",
+                  "valueType": "string",
+                  "idShort": "Description",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 1.1,
+                  "valueType": "double",
+                  "idShort": "InputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 2.5,
+                  "valueType": "double",
+                  "idShort": "OutputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Task,Moving1",
+                  "valueType": "string",
+                  "idShort": "SuppoertedProcess",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability1",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Capability",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Capability2",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving2",
+                  "valueType": "string",
+                  "idShort": "Name",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving2",
+                  "valueType": "string",
+                  "idShort": "Description",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 2.2,
+                  "valueType": "double",
+                  "idShort": "InputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 3.5,
+                  "valueType": "double",
+                  "idShort": "OutputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Task,Moving2",
+                  "valueType": "string",
+                  "idShort": "SuppoertedProcess",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability2",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Capability",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            },
+            {
+              "modelType": {
+                "name": "SubmodelElementCollection"
+              },
+              "kind": "Instance",
+              "idShort": "Capability3",
+              "value": [
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving3",
+                  "valueType": "string",
+                  "idShort": "Name",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability3",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Moving3",
+                  "valueType": "string",
+                  "idShort": "Description",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability3",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 3.3,
+                  "valueType": "double",
+                  "idShort": "InputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability3",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": 4.5,
+                  "valueType": "double",
+                  "idShort": "OutputParameter",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability3",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "modelType": {
+                    "name": "Property"
+                  },
+                  "kind": "Instance",
+                  "value": "Task,Moving3",
+                  "valueType": "string",
+                  "idShort": "SuppoertedProcess",
+                  "parent": {
+                    "keys": [
+                      {
+                        "type": "SubmodelElementCollection",
+                        "local": true,
+                        "value": "Capability3",
+                        "idType": "IdShort"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "ordered": true,
+              "allowDuplicates": true,
+              "parent": {
+                "keys": [
+                  {
+                    "type": "SubmodelElementCollection",
+                    "local": true,
+                    "value": "Capability",
+                    "idType": "IdShort"
+                  }
+                ]
+              }
+            }
+          ],
+          "ordered": true,
+          "allowDuplicates": true,
+          "parent": {
+            "keys": [
+              {
+                "type": "SubmodelElementCollection",
+                "local": true,
+                "value": "Robot",
+                "idType": "IdShort"
+              }
+            ]
+          }
+        }
+      ],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ResourceSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "EndEffector",
+      "value": [],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ResourceSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    },
+    {
+      "modelType": {
+        "name": "SubmodelElementCollection"
+      },
+      "kind": "Instance",
+      "idShort": "Gripper",
+      "value": [],
+      "ordered": true,
+      "allowDuplicates": true,
+      "parent": {
+        "keys": [
+          {
+            "type": "Submodel",
+            "local": true,
+            "value": "ResourceSubmodel",
+            "idType": "IRI"
+          }
+        ]
+      }
+    }
+  ],
+  "parent": {
+    "keys": [
+      {
+        "type": "AssetAdministrationShell",
+        "local": true,
+        "value": "TestResourceAAS",
+        "idType": "Custom"
+      }
+    ]
+  }
+}

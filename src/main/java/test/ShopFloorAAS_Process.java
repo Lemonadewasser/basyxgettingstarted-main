@@ -44,7 +44,12 @@ public class ShopFloorAAS_Process {
     public List<String> processes_name;
     public List<String> processes_description;
     public List<String> processes_resource;
-    public List<String> processes_constraints;
+    // public List<String> processes_constraints;
+    public List<List<Double>> processes_tempRange;
+    public List<List<Double>> processes_forceRange;
+    public List<List<Double>> processes_deformingPosition;
+    public List<List<Double>> processes_deformationSpeedExtremum;
+
     public List<String> processes_capability;
 
     public List<List<Integer>> tasks_number;
@@ -59,7 +64,8 @@ public class ShopFloorAAS_Process {
 
 
     public ShopFloorAAS_Process(double value, List<Integer> processes_number, List<String> processes_name, List<String> processes_description, List<String> processes_resource,
-    List<String> processes_constraints, List<String> processes_capability, List<List<Integer>> tasks_number, List<List<String>> tasks_names, List<List<String>> tasks_position,
+    List<List<Double>> processes_tempRange, List<List<Double>> processes_forceRange, List<List<Double>> processes_deformingPosition, List<List<Double>> processes_deformationSpeedExtremum,
+    List<String> processes_capability, List<List<Integer>> tasks_number, List<List<String>> tasks_names, List<List<String>> tasks_position,
     List<List<String>> tasks_orientation, List<List<Double>> tasks_velocity, List<List<Boolean>> tasks_inputParameter, List<List<Boolean>> tasks_outputParameter,
     List<List<String>> tasks_resource, List<List<String>> tasks_constraints){
         this.value = value;
@@ -68,7 +74,12 @@ public class ShopFloorAAS_Process {
         this.processes_name = processes_name;
         this.processes_description = processes_description;
         this.processes_resource = processes_resource;
-        this.processes_constraints = processes_constraints;
+        // this.processes_constraints = processes_constraints;
+        this.processes_tempRange = processes_tempRange;
+        this.processes_forceRange = processes_forceRange;
+        this.processes_deformingPosition = processes_deformingPosition;
+        this.processes_deformationSpeedExtremum =  processes_deformationSpeedExtremum;
+
         this.processes_capability = processes_capability;
 
         this.tasks_number = tasks_number;
@@ -121,9 +132,77 @@ public class ShopFloorAAS_Process {
             process_step.addSubmodelElement(process_resource);
 
             // 5.process constraints
-            Property process_constraints = new Property();
-            process_constraints.setIdShort("ProcessConstraints");
-            process_constraints.setValue(this.processes_constraints.get(process));
+            SubmodelElementCollection process_constraints = new SubmodelElementCollection("ProcessConstraints");
+
+            // 5.1 SMC temprange
+            SubmodelElementCollection process_tempRange = new SubmodelElementCollection("TemperatureRange");
+
+            // property maximal temperature
+            Property maxTemp = new Property();
+            maxTemp.setIdShort("MaxTemperature");
+            maxTemp.setValue(this.processes_tempRange.get(process).get(1));
+            process_tempRange.addSubmodelElement(maxTemp);
+            // property minmal temperature
+            Property minTemp = new Property();
+            minTemp.setIdShort("MinTemperature");
+            minTemp.setValue(this.processes_tempRange.get(process).get(0));
+            process_tempRange.addSubmodelElement(minTemp);
+
+            process_constraints.addSubmodelElement(process_tempRange);
+
+            // 5.2 SMC applied force range
+            SubmodelElementCollection process_appliedForceRange = new SubmodelElementCollection("AppliedForceRange");
+
+            // property maximal force
+            Property maxForce = new Property();
+            maxForce.setIdShort("MaxForce");
+            maxForce.setValue(this.processes_forceRange.get(process).get(1));
+            process_appliedForceRange.addSubmodelElement(maxForce);
+            // property minimal force
+            Property minForce = new Property();
+            minForce.setIdShort("MinForce");
+            minForce.setValue(this.processes_forceRange.get(process).get(0));
+            process_appliedForceRange.addSubmodelElement(minForce);
+
+            process_constraints.addSubmodelElement(process_appliedForceRange);
+
+            // 5.3 SMC deforming position area
+            SubmodelElementCollection process_deformingPositionArea = new SubmodelElementCollection("DeformingPositionArea");
+
+            // property position x
+            Property process_positionx = new Property();
+            process_positionx.setIdShort("PositionX");
+            process_positionx.setValue(this.processes_deformingPosition.get(process).get(0));
+            process_deformingPositionArea.addSubmodelElement(process_positionx);
+            // property position y
+            Property process_positiony = new Property();
+            process_positiony.setIdShort("PositionY");
+            process_positiony.setValue(this.processes_deformingPosition.get(process).get(1));
+            process_deformingPositionArea.addSubmodelElement(process_positiony);
+            // property radius
+            Property process_positionRadius = new Property();
+            process_positionRadius.setIdShort("PositionRadius");
+            process_positionRadius.setValue(this.processes_deformingPosition.get(process).get(2));
+            process_deformingPositionArea.addSubmodelElement(process_positionRadius);
+            
+            process_constraints.addSubmodelElement(process_deformingPositionArea);
+
+            // 5.4 SMC deformation speed extremum
+            SubmodelElementCollection process_deformationSpeedExtremum = new SubmodelElementCollection("DeformationSpeedExtremum");
+
+            // property max deformation speed
+            Property maxDeformationSpeed = new Property();
+            maxDeformationSpeed.setIdShort("MaxDeformationSpeed");
+            maxDeformationSpeed.setValue(this.processes_deformationSpeedExtremum.get(process).get(1));
+            process_deformationSpeedExtremum.addSubmodelElement(maxDeformationSpeed);
+            // property min deformation speed
+            Property minDeformationSpeed = new Property();
+            minDeformationSpeed.setIdShort("MinDeformationSpeed");
+            minDeformationSpeed.setValue(this.processes_deformationSpeedExtremum.get(process).get(0));
+            process_deformationSpeedExtremum.addSubmodelElement(minDeformationSpeed);
+            
+            process_constraints.addSubmodelElement(process_deformationSpeedExtremum);
+
             process_step.addSubmodelElement(process_constraints);
 
             // 6.process capability
@@ -195,7 +274,7 @@ public class ShopFloorAAS_Process {
 	}
 
 	public static AssetAdministrationShell createAAS(Asset processAsset, String AASIdentifier, String description) {
-		// create product asset and set aas
+		// create process asset and set aas
 		AssetAdministrationShell processShell = new AssetAdministrationShell(AASIdentifier, new CustomId(AASIdentifier),
 				processAsset);
 		// create description for product shell
@@ -301,7 +380,10 @@ public class ShopFloorAAS_Process {
         List.of("Deforming1", "Deforming2"), 
         List.of("Deforming a sheet1", "Deforming a sheet2"),
         List.of("Robot", "Gripper"),
-        List.of("Done in 2 mins1", "Done in 3 mins2"),
+        List.of(List.of(200.0,300.0), List.of(250.0,350.0)),
+        List.of(List.of(100.0,200.0), List.of(200.0,300.0)),
+        List.of(List.of(1.1,2.2, 5.0), List.of(2.8,3.5,8.0)),
+        List.of(List.of(1.0,2.0), List.of(2.0,3.0)),
         List.of("change the shape to meet the specification1", "change the shape to meet the specification2"),
         List.of(List.of(0,1), List.of(0,1)), 
         List.of(List.of("Gripping", "Moving"), List.of("Heating","Pressing")),
