@@ -42,105 +42,88 @@ public class ShopFloorAAS_Resource {
     // required objects for the properties
     public double value;
 
+    public List<String> smc_name; //number3
+
     public List<Integer> document_number;
-    public List<String> documentsID;
-    public List<String> documentsClassID;
-    public List<String> documentsClassName;
-    public List<Boolean> documentsIsPrimary;
-    public List<String> documentsClassificationSystem;
-    public List<String> languages;
-    public List<String> documentsVersionID;
-    public List<String> titles;
+    public List<List<String>> documentsID; //n*3, here is 2*3
+    public List<List<String>> documentsClassID; //n*3, here is 2*3
+    public List<List<String>> documentsClassName; //n*3, here is 2*3
+    public List<List<Boolean>> documentsIsPrimary; //n*3, here is 2*3
+    public List<List<String>> documentsClassificationSystem; //n*3, here is 2*3
+    public List<List<String>> languages; //n*3, here is 2*3
+    public List<List<String>> documentsVersionID; //n*3, here is 2*3
+    public List<List<String>> titles; //n*3, here is 2*3
 
-    public String manufacturersName;
-    public String manufacturersLogo;
-    public String manufacturersProductDesignation;
-    public String manufacturersOrderCode;
-    public String manufacturersImage;
+    public List<String> manufacturersName; //number 3
+    public List<String> manufacturersLogo; //number 3
+    public List<String> manufacturersProductDesignation; //number 3
+    public List<String> manufacturersOrderCode; //number 3
+    public List<String> manufacturersImage; //number 3
 
-    public List<String> classificationSystems;
-    public List<String> classificationSystemVersions;
-    public List<String> classIds;
+    public List<List<String>> classificationSystems; // size 2*3
+    public List<List<String>> classificationSystemVersions; //size 2*3
+    public List<List<String>> classIds; // size 2*3
 
-    public String actuatorTypes;
-    public double torques;
-    public double forces;
-    public String controlSystems;
-    public double powerRequirements;
-    public double speeds;
-    public double accelerations;
-    public double precisions;
+    public List<Double> speed; //number 3
+    public List<String> material_composition;//number 3
+    public List<Double> acceleration;//number 3
+    public List<String> pathOfLinkStructures;//number 3
+    public List<Double> precision;//number 3
+    public List<List<String>> constraints;//size 7*3
 
-    public String pathOfModel;
-    public List<Double> dimensions;
-    public double weights;
-    public double freedom;
-    public List<Double> positions;
-    public List<Double> orientations;
-
-    public String pathOfLinkStructures;
-    public String jointTypes;
-    public List<Double> axisOfRotations;
-    public double gripperSizes;
-    public double gripperOpeningWidths;
-    public double grippingForces;
-    public double fingerLengths;
-    public int numberOfFingers;
+    public List<String> pathOfModel; // number 3
+    public List<List<Double>> dimensions; // size 3*3
+    public List<Double> weights; // number 3
+    public List<Double> freedom; // number 3
+    public List<String> positions; // number 3
+    public List<String> orientations; // number 3
 
     public List<Integer> capability_number;
-    public List<String> capabilityNames;
-    public List<String> descriptions;
-    public List<Double> inputParameters;
-    public List<Double> outputParameters;
-    public List<String> supportedProcesses;
+    public List<List<String>> capabilityNames;
+    public List<List<String>> descriptions;
 
-    public ShopFloorAAS_Resource(double value, 
-    List<Integer> document_number, 
-    List<String> documentsID, 
-    List<String> documentsClassID, 
-    List<String> documentsClassName, 
-    List<Boolean> documentsIsPrimary, 
-    List<String> documentsClassificationSystem,
-    List<String> languages, 
-    List<String> documentsVersionID, 
-    List<String> titles, 
-    String manufacturersName, 
-    String manufacturersLogo, 
-    String manufacturersProductDesignation,
-    String manufacturersOrderCode, 
-    String manufacturersImage, 
-    List<String> classificationSystems, 
-    List<String> classificationSystemVersions, 
-    List<String> classIds, 
-    String controlSystems, 
-    double accelerations, 
-    String actuatorTypes, 
-    double torques, 
-    double forces, 
-    double powerRequirements,
-    double speed,
-    double precisions, 
-    String pathOfModel, 
-    List<Double> dimensions, 
-    double weights,
-    double freedom,
-    List<Double> positions, 
-    List<Double> orientations, 
-    String pathOfLinkStructures, 
-    String jointTypes,
-    List<Double> axisOfRotations, 
-    double gripperSizes, 
-    double gripperOpeningWidths, 
-    double grippingForces, 
-    double fingerLengths, 
-    int numberOfFingers, 
-    List<Integer> capability_number, 
-    List<String> capabilityNames, 
-    List<String> descriptions, 
-    List<Double> inputParameters, 
-    List<Double> outputParameters, 
-    List<String> supportedProcesses){
+    public ShopFloorAAS_Resource(double value,
+    List<String> smc_name,
+
+    List<Integer> document_number,
+    List<List<String>> documentsID, 
+    List<List<String>> documentsClassID, 
+    List<List<String>> documentsClassName, 
+    List<List<Boolean>> documentsIsPrimary, 
+    List<List<String>> documentsClassificationSystem,
+    List<List<String>> languages, 
+    List<List<String>> documentsVersionID, 
+    List<List<String>> titles, 
+
+    List<String> manufacturersName, 
+    List<String> manufacturersLogo, 
+    List<String> manufacturersProductDesignation,
+    List<String> manufacturersOrderCode, 
+    List<String> manufacturersImage, 
+
+    List<List<String>> classificationSystems, 
+    List<List<String>> classificationSystemVersions, 
+    List<List<String>> classIds, 
+
+    List<Double> speed,
+    List<String> material_composition,
+    List<Double> acceleration,
+    List<String> pathOfLinkStructures,
+    List<Double> precision,
+    List<List<String>> constraints,
+
+    List<String> pathOfModel, 
+    List<List<Double>> dimensions, 
+    List<Double> weights,
+    List<Double> freedom,
+    List<String> positions, 
+    List<String> orientations, 
+    
+    List<Integer> capability_number,
+    List<List<String>> capabilityNames, 
+    List<List<String>> descriptions){
         this.value = value;
+        this.smc_name = smc_name;
 
         this.document_number = document_number;
         this.documentsID = documentsID;
@@ -162,36 +145,23 @@ public class ShopFloorAAS_Resource {
         this.classificationSystemVersions = classificationSystemVersions;
         this.classIds = classIds;
 
-        this.controlSystems = controlSystems;
-        this.accelerations = accelerations;
-        this.actuatorTypes = actuatorTypes;
-        this.torques = torques;
-        this.forces = forces;
-        this.powerRequirements = powerRequirements;
-        this.speeds = speed;
-        this.precisions = precisions;
-        
+        this.speed = speed;
+        this.material_composition = material_composition;
+        this.acceleration = acceleration;
+        this.pathOfLinkStructures = pathOfLinkStructures;
+        this.precision = precision;
+        this.constraints = constraints;
+
         this.pathOfModel = pathOfModel;
         this.dimensions = dimensions;
         this.weights = weights;
         this.freedom = freedom;
         this.positions = positions;
         this.orientations = orientations;
-        this.pathOfLinkStructures = pathOfLinkStructures;
-        this.jointTypes = jointTypes;
-        this.axisOfRotations = axisOfRotations;
-        this.gripperSizes = gripperSizes;
-        this.gripperOpeningWidths = gripperOpeningWidths;
-        this.grippingForces = grippingForces;
-        this.fingerLengths = fingerLengths;
-        this.numberOfFingers = numberOfFingers;
 
         this.capability_number = capability_number;
         this.capabilityNames = capabilityNames;
         this.descriptions = descriptions;
-        this.inputParameters = inputParameters;
-        this.outputParameters = outputParameters;
-        this.supportedProcesses = supportedProcesses;
     }
 
     Submodel createResource(){
@@ -200,447 +170,299 @@ public class ShopFloorAAS_Resource {
         resourceSubmodel.setIdShort("ResourceSubmodel");
         resourceSubmodel.setIdentification(new ModelUrn("ResourceSubmodel"));
 
-        // 1. SMC robot
-        SubmodelElementCollection robot = new SubmodelElementCollection("Robot");
+        for(int smc_count:List.of(0,1,2)){
+            // 1. SMC robot
+            SubmodelElementCollection robot = new SubmodelElementCollection(smc_name.get(smc_count));
 
-        //  1.1 SMC Documentation
-        SubmodelElementCollection documentation = new SubmodelElementCollection("Documentation");
+            //1.1 SMC Documentation
+            SubmodelElementCollection documentation = new SubmodelElementCollection("Documentation");
+            //  for different documents,from 01 to n
+            
+            for(int document_count : this.document_number){
+                // set the document number
+                int document_count1 = document_count+1;
+                // 1.1.1 SMC document n
+                SubmodelElementCollection documentNumber = new SubmodelElementCollection("Document"+document_count1);
+                //    1.1.1.1 Property document id
+                Property documentId = new Property();
+                documentId.setIdShort("DocumentID");
+                documentId.setValue(this.documentsID.get(smc_count).get(document_count));
+                documentNumber.addSubmodelElement(documentId);
+                //    1.1.1.2 Property document class id
+                Property documentClassId = new Property();
+                documentClassId.setIdShort("DocumentClassID");
+                documentClassId.setValue(this.documentsClassID.get(smc_count).get(document_count));
+                documentNumber.addSubmodelElement(documentClassId);
+                //    1.1.1.3 Property document class name
+                Property documentClassName = new Property();
+                documentClassName.setIdShort("DocumentClassName");
+                documentClassName.setValue(this.documentsClassName.get(smc_count).get(document_count));
+                documentNumber.addSubmodelElement(documentClassName);
+                //    1.1.1.4 Property is primary
+                Property isPrimary = new Property();
+                isPrimary.setIdShort("IsPrimary");
+                isPrimary.setValue(this.documentsIsPrimary.get(smc_count).get(document_count));
+                documentNumber.addSubmodelElement(isPrimary);
+                //    1.1.1.5 Property document classification system
+                Property documentClassificationSystem = new Property();
+                documentClassificationSystem.setIdShort("DocumentClassificationSystem");
+                documentClassificationSystem.setValue(this.documentsClassificationSystem.get(smc_count).get(document_count));
+                documentNumber.addSubmodelElement(documentClassificationSystem);
+                //    1.1.1.6 Property document version
+                SubmodelElementCollection documentVersion = new SubmodelElementCollection("DocumentVersion");
+                //      1.1.1.6.1 Property language
+                Property language = new Property();
+                language.setIdShort("Language");
+                language.setValue(this.languages.get(smc_count).get(document_count));
+                documentVersion.addSubmodelElement(language);
+                //      1.1.1.6.2 Property document version id
+                Property documentVersionId = new Property();
+                documentVersionId.setIdShort("DocumentVersionId");
+                documentVersionId.setValue(this.documentsVersionID.get(smc_count).get(document_count));
+                documentVersion.addSubmodelElement(documentVersionId);
+                //      1.1.1.6.3 Property title
+                Property title = new Property();
+                title.setIdShort("Title");
+                title.setValue(this.titles.get(smc_count).get(document_count));
+                documentVersion.addSubmodelElement(title);
+
+
+                documentNumber.addSubmodelElement(documentVersion);
+
+                documentation.addSubmodelElement(documentNumber);
+            }
+
+            robot.addSubmodelElement(documentation);
+
+            //==================================================================================================
+
+            //  1.2 SMC Technical information
+            SubmodelElementCollection technicalInformation = new SubmodelElementCollection("TechnicalInforamtion");
+
+            //    1.2.1 SMC General information
+            SubmodelElementCollection generalInformation = new SubmodelElementCollection("GeneralInformation");
+            //      1.2.1.1 Property manufacturer name
+            Property manufacuturerName = new Property();
+            manufacuturerName.setIdShort("ManufacturerName");
+            manufacuturerName.setValue(this.manufacturersName.get(smc_count));
+            generalInformation.addSubmodelElement(manufacuturerName);
+            //      1.2.1.2 Property manufacturer Logo
+            Property manufacuturerLogo = new Property();
+            manufacuturerLogo.setIdShort("ManufacturerLogo");
+            manufacuturerLogo.setValue(this.manufacturersLogo.get(smc_count));
+            generalInformation.addSubmodelElement(manufacuturerLogo);
+            //      1.2.1.3 Property manufacturer product designation
+            Property manufacuturerProductDesignation = new Property();
+            manufacuturerProductDesignation.setIdShort("ManufacturerProductDesignation");
+            manufacuturerProductDesignation.setValue(this.manufacturersProductDesignation.get(smc_count));
+            generalInformation.addSubmodelElement(manufacuturerProductDesignation);
+            //      1.2.1.4 Property manufacturer order code
+            Property manufacuturerOrderCode = new Property();
+            manufacuturerOrderCode.setIdShort("ManufacturerOrderCode");
+            manufacuturerOrderCode.setValue(this.manufacturersOrderCode.get(smc_count));
+            generalInformation.addSubmodelElement(manufacuturerOrderCode);
+            //      1.2.1.5 Property manufacturer image
+            Property manufacuturerImage = new Property();
+            manufacuturerImage.setIdShort("ManufacturerImage");
+            manufacuturerImage.setValue(this.manufacturersImage.get(smc_count));
+            generalInformation.addSubmodelElement(manufacuturerImage);
+
+            technicalInformation.addSubmodelElement(generalInformation);
+
+            //    1.2.2 SMC product classification
+            SubmodelElementCollection resourceClassification = new SubmodelElementCollection("ResourceClassification");
+
+            //      1.2.2.1 SMC product classification item 1
+            SubmodelElementCollection resourceClassificationItem1 = new SubmodelElementCollection("ResourceClassificationItem1");
+            //          1.2.2.1.1 Property product classification system 1
+            Property resourceClassificationSystem1 = new Property();
+            resourceClassificationSystem1.setIdShort("ProductClassificationSystem1");
+            resourceClassificationSystem1.setValue(this.classificationSystems.get(smc_count).get(0));
+            resourceClassificationItem1.addSubmodelElement(resourceClassificationSystem1);
+            //          1.2.2.1.2 Property classification system version 1
+            Property productClassificationSystemVersion1 = new Property();
+            productClassificationSystemVersion1.setIdShort("ProductClassificationSystemVersion1");
+            productClassificationSystemVersion1.setValue(this.classificationSystems.get(smc_count).get(0));
+            resourceClassificationItem1.addSubmodelElement(productClassificationSystemVersion1);
+            //          1.2.2.1.3 Property product class id 1
+            Property productClassID1 = new Property();
+            productClassID1.setIdShort("ProductClassID1");
+            productClassID1.setValue(this.classificationSystems.get(smc_count).get(0));
+            resourceClassificationItem1.addSubmodelElement(productClassID1);
+
+            resourceClassification.addSubmodelElement(resourceClassificationItem1);
+
+            //      1.2.2.2 SMC product classification item 2
+            SubmodelElementCollection productClassificationItem2 = new SubmodelElementCollection("ProductClassificationItem2");
+            //          1.2.2.2.1 Property product classification system 2
+            Property productClassificationSystem2 = new Property();
+            productClassificationSystem2.setIdShort("ProductClassificationSystem2");
+            productClassificationSystem2.setValue(this.classificationSystems.get(smc_count).get(1));
+            productClassificationItem2.addSubmodelElement(productClassificationSystem2);
+            //          1.2.2.2.2 Property classification system version 2
+            Property productClassificationSystemVersion2 = new Property();
+            productClassificationSystemVersion2.setIdShort("ProductClassificationSystemVersion2");
+            productClassificationSystemVersion2.setValue(this.classificationSystems.get(smc_count).get(1));
+            productClassificationItem2.addSubmodelElement(productClassificationSystemVersion2);
+            //          1.2.2.2.3 Property product class id 2
+            Property productClassID2 = new Property();
+            productClassID2.setIdShort("ProductClassID2");
+            productClassID2.setValue(this.classificationSystems.get(smc_count).get(1));
+            productClassificationItem2.addSubmodelElement(productClassID2);
+
+            resourceClassification.addSubmodelElement(productClassificationItem2);
+
+
+            technicalInformation.addSubmodelElement(resourceClassification);
+
+            //    1.2.3 SMC technical properties
+            SubmodelElementCollection technicalPro = new SubmodelElementCollection("TechnicalProperties");
+
+            // 1.2.3.1 property speed
+            Property Speed = new Property();
+            Speed.setIdShort("Speed");
+            Speed.setValue(this.speed.get(smc_count).toString()+"m/s");
+            technicalPro.addSubmodelElement(Speed);
+            // 1.2.3.2 property material composition
+            Property materialComposition = new Property();
+            materialComposition.setIdShort("MaterialComposition");
+            materialComposition.setValue(this.material_composition.get(smc_count));
+            technicalPro.addSubmodelElement(materialComposition);
+            // 1.2.3.3 property acceleration
+            Property Acceleration = new Property();
+            Acceleration.setIdShort("Acceleration");
+            Acceleration.setValue(this.acceleration.get(smc_count).toString()+"m/s^2");
+            technicalPro.addSubmodelElement(Acceleration);
+            // 1.2.3.4 property link structure
+            Property linkstructure = new Property();
+            linkstructure.setIdShort("Linkstructure");
+            linkstructure.setValue(this.pathOfLinkStructures.get(smc_count));
+            technicalPro.addSubmodelElement(linkstructure);
+            // 1.2.3.5 property precision
+            Property Precision = new Property();
+            Precision.setIdShort("Precision");
+            Precision.setValue(this.precision.get(smc_count).toString()+"mm");
+            technicalPro.addSubmodelElement(Precision);
+
+            // 1.2.3.6 smc constraints
+            SubmodelElementCollection Constraints = new SubmodelElementCollection("Constraints");
+            // 1.2.3.6.1 property power range
+            Property powerRange = new Property();
+            powerRange.setIdShort("PowerRange");
+            powerRange.setValue(this.constraints.get(smc_count).get(0));
+            Constraints.addSubmodelElement(powerRange);
+            // 1.2.3.6.2 property speed range
+            Property speedRange = new Property();
+            speedRange.setIdShort("SpeedRange");
+            speedRange.setValue(this.constraints.get(smc_count).get(1));
+            Constraints.addSubmodelElement(speedRange);
+            // 1.2.3.6.3 property reach
+            Property reach = new Property();
+            reach.setIdShort("Reach");
+            reach.setValue(this.constraints.get(smc_count).get(2));
+            Constraints.addSubmodelElement(reach);
+            // 1.2.3.6.4 property applied force range
+            Property forceRange = new Property();
+            forceRange.setIdShort("AppliedForceRange");
+            forceRange.setValue(this.constraints.get(smc_count).get(3));
+            Constraints.addSubmodelElement(forceRange);
+            // 1.2.3.6.5 property open range
+            Property openRange = new Property();
+            openRange.setIdShort("OpenRange");
+            openRange.setValue(this.constraints.get(smc_count).get(4));
+            Constraints.addSubmodelElement(openRange);
+            // 1.2.3.6.6 property temperature range
+            Property temperature = new Property();
+            temperature.setIdShort("Temperature");
+            temperature.setValue(this.constraints.get(smc_count).get(5));
+            Constraints.addSubmodelElement(temperature);
+            // 1.2.3.6.7 property load-bearing range
+            Property loadRange = new Property();
+            loadRange.setIdShort("LoadBearingRange");
+            loadRange.setValue(this.constraints.get(smc_count).get(6));
+            Constraints.addSubmodelElement(loadRange);
         
-        //  for different documents,from 01 to n
-        for(int document : this.document_number){
-            // set the document number
-            int count = document+1;
-            // 1.1.1 SMC document n
-            SubmodelElementCollection documentNumber = new SubmodelElementCollection("Document"+count);
+            technicalPro.addSubmodelElement(Constraints);
+            technicalInformation.addSubmodelElement(technicalPro);
 
-            //    1.1.1.1 Property document id
-            Property documentId = new Property();
-            documentId.setIdShort("DocumentID");
-            documentId.setValue(this.documentsID.get(document));
-            documentNumber.addSubmodelElement(documentId);
+            robot.addSubmodelElement(technicalInformation);
 
-            //    1.1.1.2 Property document class id
-            Property documentClassId = new Property();
-            documentClassId.setIdShort("DocumentClassID");
-            documentClassId.setValue(this.documentsClassID.get(document));
-            documentNumber.addSubmodelElement(documentClassId);
+            //  1.3 SMC Geometry information
+            SubmodelElementCollection geometryInformation = new SubmodelElementCollection("GeometryInformation");
+            //    1.3.1 Property 3d model
+            Property robot3DModel = new Property();
+            robot3DModel.setIdShort("threeDModel");
+            robot3DModel.setValue(this.pathOfModel.get(smc_count));
+            geometryInformation.addSubmodelElement(robot3DModel);
+            //      1.3.2.1 Property height
+            Property height = new Property();
+            height.setIdShort("Height");
+            height.setValue(this.dimensions.get(smc_count).get(0).toString()+"m");
+            geometryInformation.addSubmodelElement(height);
+            //      1.3.2.2 Property width
+            Property width = new Property();
+            width.setIdShort("Width");
+            width.setValue(this.dimensions.get(smc_count).get(1).toString()+"m");
+            geometryInformation.addSubmodelElement(width);
+            //      1.3.2.3 Property length
+            Property length = new Property();
+            length.setIdShort("Length");
+            length.setValue(this.dimensions.get(smc_count).get(2).toString()+"m");
+            geometryInformation.addSubmodelElement(length);
+            //      1.3.2.4 Property weight
+            Property weight = new Property();
+            weight.setIdShort("Weight");
+            weight.setValue(this.weights.get(smc_count).toString()+"kg");
+            geometryInformation.addSubmodelElement(weight);
+            //      1.3.2.5 Property degrees of freedom
+            Property degreesOfFreedom = new Property();
+            degreesOfFreedom.setIdShort("DegreesOfFreedom");
+            degreesOfFreedom.setValue(this.freedom.get(smc_count));
+            geometryInformation.addSubmodelElement(degreesOfFreedom);
+            // 1.3.2.6 installation position
+            Property intallationPosition = new Property();
+            intallationPosition.setIdShort("InstallationPosition");
+            intallationPosition.setValue(this.positions.get(smc_count));
+            geometryInformation.addSubmodelElement(intallationPosition);
+            // 1.3.2.7 installation orientation
+            Property intallationOrientation = new Property();
+            intallationOrientation.setIdShort("InstallationOrientation");
+            intallationOrientation.setValue(this.orientations.get(smc_count));
+            geometryInformation.addSubmodelElement(intallationOrientation);
 
-            //    1.1.1.3 Property document class name
-            Property documentClassName = new Property();
-            documentClassName.setIdShort("DocumentClassName");
-            documentClassName.setValue(this.documentsClassName.get(document));
-            documentNumber.addSubmodelElement(documentClassName);
-
-            //    1.1.1.4 Property is primary
-            Property isPrimary = new Property();
-            isPrimary.setIdShort("IsPrimary");
-            isPrimary.setValue(this.documentsIsPrimary.get(document));
-            documentNumber.addSubmodelElement(isPrimary);
-
-            //    1.1.1.5 Property document classification system
-            Property documentClassificationSystem = new Property();
-            documentClassificationSystem.setIdShort("DocumentClassificationSystem");
-            documentClassificationSystem.setValue(this.documentsClassificationSystem.get(document));
-            documentNumber.addSubmodelElement(documentClassificationSystem);
-
-            //    1.1.1.6 Property document version
-            SubmodelElementCollection documentVersion = new SubmodelElementCollection("DocumentVersion");
-
-            //      1.1.1.6.1 Property language
-            Property language = new Property();
-            language.setIdShort("Language");
-            language.setValue(this.languages.get(document));
-            documentVersion.addSubmodelElement(language);
-
-            //      1.1.1.6.2 Property document version id
-            Property documentVersionId = new Property();
-            documentVersionId.setIdShort("DocumentVersionId");
-            documentVersionId.setValue(this.documentsVersionID.get(document));
-            documentVersion.addSubmodelElement(documentVersionId);
-
-            //      1.1.1.6.3 Property title
-            Property title = new Property();
-            title.setIdShort("Title");
-            title.setValue(this.titles.get(document));
-            documentVersion.addSubmodelElement(title);
+            robot.addSubmodelElement(geometryInformation);
 
 
-            documentNumber.addSubmodelElement(documentVersion);
-
-            documentation.addSubmodelElement(documentNumber);
-        }
-
-        robot.addSubmodelElement(documentation);
-
-        //  1.2 SMC Technical information
-        SubmodelElementCollection technicalInformation = new SubmodelElementCollection("TechnicalInforamtion");
-
-        //    1.2.1 SMC General information
-        SubmodelElementCollection generalInformation = new SubmodelElementCollection("GeneralInformation");
-
-        //      1.2.1.1 Property manufacturer name
-        Property manufacuturerName = new Property();
-        manufacuturerName.setIdShort("ManufacturerName");
-        manufacuturerName.setValue(this.manufacturersName);
-        generalInformation.addSubmodelElement(manufacuturerName);
-
-        //      1.2.1.2 Property manufacturer Logo
-        Property manufacuturerLogo = new Property();
-        manufacuturerLogo.setIdShort("ManufacturerLogo");
-        manufacuturerLogo.setValue(this.manufacturersLogo);
-        generalInformation.addSubmodelElement(manufacuturerLogo);
-
-        //      1.2.1.3 Property manufacturer product designation
-        Property manufacuturerProductDesignation = new Property();
-        manufacuturerProductDesignation.setIdShort("ManufacturerProductDesignation");
-        manufacuturerProductDesignation.setValue(this.manufacturersProductDesignation);
-        generalInformation.addSubmodelElement(manufacuturerProductDesignation);
-
-        //      1.2.1.4 Property manufacturer order code
-        Property manufacuturerOrderCode = new Property();
-        manufacuturerOrderCode.setIdShort("ManufacturerOrderCode");
-        manufacuturerOrderCode.setValue(this.manufacturersOrderCode);
-        generalInformation.addSubmodelElement(manufacuturerOrderCode);
-
-        //      1.2.1.5 Property manufacturer image
-        Property manufacuturerImage = new Property();
-        manufacuturerImage.setIdShort("ManufacturerImage");
-        manufacuturerImage.setValue(this.manufacturersImage);
-        generalInformation.addSubmodelElement(manufacuturerImage);
-
-
-        technicalInformation.addSubmodelElement(generalInformation);
-
-        //    1.2.2 SMC product classification
-        SubmodelElementCollection productClassification = new SubmodelElementCollection("ProductClassification");
-
-        //      1.2.2.1 SMC product classification item 1
-        SubmodelElementCollection productClassificationItem1 = new SubmodelElementCollection("ProductClassificationItem1");
-
-        //          1.2.2.1.1 Property product classification system 1
-        Property productClassificationSystem1 = new Property();
-        productClassificationSystem1.setIdShort("ProductClassificationSystem1");
-        productClassificationSystem1.setValue(this.classificationSystems.get(0));
-        productClassificationItem1.addSubmodelElement(productClassificationSystem1);
-
-        //          1.2.2.1.2 Property classification system version 1
-        Property productClassificationSystemVersion1 = new Property();
-        productClassificationSystemVersion1.setIdShort("ProductClassificationSystemVersion1");
-        productClassificationSystemVersion1.setValue(this.classificationSystems.get(0));
-        productClassificationItem1.addSubmodelElement(productClassificationSystemVersion1);
-
-        //          1.2.2.1.3 Property product class id 1
-        Property productClassID1 = new Property();
-        productClassID1.setIdShort("ProductClassID1");
-        productClassID1.setValue(this.classificationSystems.get(0));
-        productClassificationItem1.addSubmodelElement(productClassID1);
-
-        productClassification.addSubmodelElement(productClassificationItem1);
-
-        //      1.2.2.2 SMC product classification item 2
-        SubmodelElementCollection productClassificationItem2 = new SubmodelElementCollection("ProductClassificationItem2");
-
-        //          1.2.2.2.1 Property product classification system 2
-        Property productClassificationSystem2 = new Property();
-        productClassificationSystem2.setIdShort("ProductClassificationSystem2");
-        productClassificationSystem2.setValue(this.classificationSystems.get(1));
-        productClassificationItem2.addSubmodelElement(productClassificationSystem2);
-
-        //          1.2.2.2.2 Property classification system version 2
-        Property productClassificationSystemVersion2 = new Property();
-        productClassificationSystemVersion2.setIdShort("ProductClassificationSystemVersion2");
-        productClassificationSystemVersion2.setValue(this.classificationSystems.get(1));
-        productClassificationItem2.addSubmodelElement(productClassificationSystemVersion2);
-        
-        //          1.2.2.2.3 Property product class id 2
-        Property productClassID2 = new Property();
-        productClassID2.setIdShort("ProductClassID2");
-        productClassID2.setValue(this.classificationSystems.get(1));
-        productClassificationItem2.addSubmodelElement(productClassID2);
-
-        productClassification.addSubmodelElement(productClassificationItem2);
-
-
-        technicalInformation.addSubmodelElement(productClassification);
-
-
-        //    1.2.3 SMC technical properties
-        SubmodelElementCollection technicalPro = new SubmodelElementCollection("TechnicalProperties");
-
-        // //      1.2.3.1 SMC motion control
-        // SubmodelElementCollection motionControl = new SubmodelElementCollection("MotionControl");
-        // //          1.2.3.1.1 Property max speed
-        // Property maxSpeed = new Property();
-        // maxSpeed.setIdShort("MaxSpeed");
-        // maxSpeed.setValue(this.maxSpeeds);
-        // motionControl.addSubmodelElement(maxSpeed);
-        // //          1.2.3.1.2 Property control system
-        // Property controlSystem = new Property();
-        // controlSystem.setIdShort("ControlSystem");
-        // controlSystem.setValue(this.controlSystems);
-        // motionControl.addSubmodelElement(controlSystem);
-        //          1.2.3.1.3 Property acceleration
-        // Property acceleration = new Property();
-        // acceleration.setIdShort("Acceleration");
-        // acceleration.setValue(this.accelerations);
-        // motionControl.addSubmodelElement(acceleration);
-
-        // technicalPro.addSubmodelElement(motionControl);
-
-        //      1.2.3.2 SMC actuator
-        SubmodelElementCollection actuator = new SubmodelElementCollection("Actuator");
-        //          1.2.3.2.1 Property actuator
-        Property actuatorType = new Property();
-        actuatorType.setIdShort("ActuatorType");
-        actuatorType.setValue(this.actuatorTypes);
-        actuator.addSubmodelElement(actuatorType);
-        //          1.2.3.2.2 Property torque and force
-        Property torqueAndForce = new Property();
-        torqueAndForce.setIdShort("TorqueAndForce");
-        torqueAndForce.setValue(Math.max(this.torques, this.forces));
-        actuator.addSubmodelElement(torqueAndForce);
-
-        technicalPro.addSubmodelElement(actuator);
-
-        //          1.2.3.1.2 Property control system
-        Property controlSystem = new Property();
-        controlSystem.setIdShort("ControlSystem");
-        controlSystem.setValue(controlSystems);
-        technicalPro.addSubmodelElement(controlSystem);
-
-        //      1.2.3.4 Property power requirements
-        Property powerRequirements = new Property();
-        powerRequirements.setIdShort("PowerRequirements");
-        powerRequirements.setValue(this.powerRequirements);
-        technicalPro.addSubmodelElement(powerRequirements);
-
-        //      1.2.3.5 Property speed and acceleration
-        Property speedAndAcceleration = new Property();
-        speedAndAcceleration.setIdShort("SpeedAndAcceleration");
-        speedAndAcceleration.setValue(Math.max(this.speeds, this.accelerations));
-        technicalPro.addSubmodelElement(speedAndAcceleration);
-
-        //      1.2.3.6 Property precision
-        Property precision = new Property();
-        precision.setIdShort("Precision");
-        precision.setValue(this.precisions);
-        technicalPro.addSubmodelElement(precision);
-
-        technicalInformation.addSubmodelElement(technicalPro);
-
-        robot.addSubmodelElement(technicalInformation);
-
+            //  1.4 SMC Capability
+            SubmodelElementCollection capability = new SubmodelElementCollection("Capability");
     
-        //  1.3 SMC Geometry information
-        SubmodelElementCollection geometryInformation = new SubmodelElementCollection("GeometryInformation");
+            for (int capability_count : this.capability_number) {
+                int capability_count1 = capability_count + 1;
 
-        //    1.3.1 Property 3d model
-        Property robot3DModel = new Property();
-        robot3DModel.setIdShort("Robot3DModel");
-        robot3DModel.setValue(this.pathOfModel);
-        geometryInformation.addSubmodelElement(robot3DModel);
+                SubmodelElementCollection capabilityCollection = new SubmodelElementCollection("Capability"+Integer.toString(capability_count1));
 
-        //    1.3.2 SMC dimensions
-        SubmodelElementCollection dimensions = new SubmodelElementCollection("Dimensions");
+                // 1.4.1 Property Name
+                Property capabilityName = new Property();
+                capabilityName.setIdShort("Name");
+                capabilityName.setValue(this.capabilityNames.get(smc_count).get(capability_count));
+                capabilityCollection.addSubmodelElement(capabilityName);
+                //    1.4.2 Property Description
+                Property description = new Property();
+                description.setIdShort("Description");
+                description.setValue(this.descriptions.get(smc_count).get(capability_count));
+                capabilityCollection.addSubmodelElement(description);
 
-        //      1.3.2.1 Property height
-        Property height = new Property();
-        height.setIdShort("Height");
-        height.setValue(this.dimensions.get(0));
-        dimensions.addSubmodelElement(height);
-
-        //      1.3.2.2 Property width
-        Property width = new Property();
-        width.setIdShort("Width");
-        width.setValue(this.dimensions.get(1));
-        dimensions.addSubmodelElement(width);
-
-        //      1.3.2.3 Property length
-        Property length = new Property();
-        length.setIdShort("Length");
-        length.setValue(this.dimensions.get(2));
-        dimensions.addSubmodelElement(length);
-
-        //      1.3.2.4 Property weight
-        Property weight = new Property();
-        weight.setIdShort("Weight");
-        weight.setValue(this.weights);
-        dimensions.addSubmodelElement(weight);
-
-        //      1.3.2.5 Property degrees of freedom
-        Property degreesOfFreedom = new Property();
-        degreesOfFreedom.setIdShort("DegreesOfFreedom");
-        degreesOfFreedom.setValue(this.freedom);
-        dimensions.addSubmodelElement(degreesOfFreedom);
-
-
-        geometryInformation.addSubmodelElement(dimensions);
-        //    1.3.3 SMC position
-        SubmodelElementCollection position = new SubmodelElementCollection("Position");
-        //    set x axis
-        Property position_x = new Property();
-        position_x.setIdShort("Position_x");
-        position_x.setValue(this.positions.get(0));
-        position.addSubmodelElement(position_x);
-        //    set y axis
-        Property position_y = new Property();
-        position_y.setIdShort("Position_y");
-        position_y.setValue(this.positions.get(1));
-        position.addSubmodelElement(position_y);
-        //    set z axis
-        Property position_z = new Property();
-        position_z.setIdShort("Position_z");
-        position_z.setValue(this.positions.get(2));
-        position.addSubmodelElement(position_z);
-
-        generalInformation.addSubmodelElement(position);
-        
-        //    1.3.4 SMC orientation
-        SubmodelElementCollection orientation = new SubmodelElementCollection("Orientation");
-        //    set x axis
-        Property orientation_x = new Property();
-        orientation_x.setIdShort("Orientation_x");
-        orientation_x.setValue(this.orientations.get(0));
-        orientation.addSubmodelElement(orientation_x);
-        //    set y axis
-        Property orientation_y = new Property();
-        orientation_y.setIdShort("Orientation_y");
-        orientation_y.setValue(this.orientations.get(1));
-        orientation.addSubmodelElement(orientation_y);
-        //    set z axis
-        Property orientation_z = new Property();
-        orientation_z.setIdShort("Orientation_z");
-        orientation_z.setValue(this.orientations.get(2));
-        orientation.addSubmodelElement(orientation_z);
-
-        generalInformation.addSubmodelElement(orientation);
-        
-        //    1.3.5 SMC configuration
-        SubmodelElementCollection configuration = new SubmodelElementCollection("Configuration");
-
-        //      1.3.5.1 Property Link Structure
-        Property linkstructure = new Property();
-        linkstructure.setIdShort("Linkstructure");
-        linkstructure.setValue(this.pathOfLinkStructures);
-        configuration.addSubmodelElement(linkstructure);
-
-        //      1.3.5.2 Property Joint Type
-        Property jointType = new Property();
-        jointType.setIdShort("JointType");
-        jointType.setValue(this.jointTypes);
-        configuration.addSubmodelElement(jointType);
-
-        //      1.3.5.3 Property Axis of Rotation
-        SubmodelElementCollection rotation = new SubmodelElementCollection("AxisOfRotation");
-
-        // rotation x
-        Property rotation_x = new Property();
-        rotation_x.setIdShort("Rotation_x");
-        rotation_x.setValue(this.axisOfRotations.get(0));
-        rotation.addSubmodelElement(rotation_x);
-        // rotation y
-        Property rotation_y = new Property();
-        rotation_y.setIdShort("Rotation_y");
-        rotation_y.setValue(this.axisOfRotations.get(1));
-        rotation.addSubmodelElement(rotation_y);
-        // rotation z
-        Property rotation_z = new Property();
-        rotation_z.setIdShort("Rotation_z");
-        rotation_z.setValue(this.axisOfRotations.get(2));
-        rotation.addSubmodelElement(rotation_z);
-
-        configuration.addSubmodelElement(rotation);
-
-        //      1.3.5.4 Property Gripper size
-        Property gripperSize = new Property();
-        gripperSize.setIdShort("GripperSize");
-        gripperSize.setValue(this.gripperSizes);
-        configuration.addSubmodelElement(gripperSize);
-
-        //      1.3.5.5 Property gripper opening width
-        Property gripperOpeningWidth = new Property();
-        gripperOpeningWidth.setIdShort("GripperOpeningWidth");
-        gripperOpeningWidth.setValue(this.gripperOpeningWidths);
-        configuration.addSubmodelElement(gripperOpeningWidth);
-
-        //      1.3.5.6 Property gripping force
-        Property grippingForce = new Property();
-        grippingForce.setIdShort("GrippingForce");
-        grippingForce.setValue(this.grippingForces);
-        configuration.addSubmodelElement(grippingForce);
-
-        //      1.3.5.7 Property finger length
-        Property fingerLength = new Property();
-        fingerLength.setIdShort("FingerLength");
-        fingerLength.setValue(this.fingerLengths);
-        configuration.addSubmodelElement(fingerLength);
-
-        //      1.3.5.8 Property number of fingers
-        Property numberOfFinger = new Property();
-        numberOfFinger.setIdShort("NumberOfFingers");
-        numberOfFinger.setValue(this.numberOfFingers);
-        configuration.addSubmodelElement(numberOfFinger);
-
-        geometryInformation.addSubmodelElement(configuration);
-
-        robot.addSubmodelElement(geometryInformation);
-
-
-        //  1.4 SMC Capability
-        SubmodelElementCollection capability = new SubmodelElementCollection("Capability");
-
-        for (int number : capability_number) {
-            int count = number + 1;
-
-            SubmodelElementCollection capabilityCollection = new SubmodelElementCollection("Capability"+count);
-
-            // 1.4.1 Property Name
-            Property capabilityName = new Property();
-            capabilityName.setIdShort("Name");
-            capabilityName.setValue(this.capabilityNames.get(number));
-            capabilityCollection.addSubmodelElement(capabilityName);
-
-            //    1.4.2 Property Description
-            Property description = new Property();
-            description.setIdShort("Description");
-            description.setValue(this.descriptions.get(number));
-            capabilityCollection.addSubmodelElement(description);
-
-            //    1.4.3 Property Input Parameter
-            Property inputParameter = new Property();
-            inputParameter.setIdShort("InputParameter");
-            inputParameter.setValue(this.inputParameters.get(number));
-            capabilityCollection.addSubmodelElement(inputParameter);
-
-            //    1.4.4 Property Output Parameter
-            Property outputParameter = new Property();
-            outputParameter.setIdShort("OutputParameter");
-            outputParameter.setValue(this.outputParameters.get(number));
-            capabilityCollection.addSubmodelElement(outputParameter);
-
-            //    1.4.5 Property Supported Process
-            Property supportedProcess = new Property();
-            supportedProcess.setIdShort("SuppoertedProcess");
-            supportedProcess.setValue(this.supportedProcesses.get(number));
-            capabilityCollection.addSubmodelElement(supportedProcess);
-
-            capability.addSubmodelElement(capabilityCollection);
-        }
+                capability.addSubmodelElement(capabilityCollection);
+            }
            
 
-        robot.addSubmodelElement(capability);
+            robot.addSubmodelElement(capability);
 
-        
-        // 2. SMC EndEffector
-        SubmodelElementCollection endEffector = new SubmodelElementCollection("EndEffector");
 
-        // 3. SMC Gripper
-        SubmodelElementCollection gripper = new SubmodelElementCollection("Gripper");
+            //add all the SMC123 to the resource submodel
+            resourceSubmodel.addSubmodelElement(robot);
+        }
 
-        // add all the SMC123 to the resource submodel
-        resourceSubmodel.addSubmodelElement(robot);
-        resourceSubmodel.addSubmodelElement(endEffector);
-        resourceSubmodel.addSubmodelElement(gripper);
 
         return resourceSubmodel;
     }
@@ -748,60 +570,49 @@ public class ShopFloorAAS_Resource {
     public static void main(String[] args) throws Exception {
 
 		// create product asset and set aas
-		Asset resourceAsset = createAsset("TestResource");
-		AssetAdministrationShell resourceShell = createAAS(resourceAsset, "TestResourceAAS",
-				"This is a test resource AAS.");
+		Asset resourceAsset = createAsset("ShopFloorAAS_Resource");
+		AssetAdministrationShell resourceShell = createAAS(resourceAsset, "ShopFloorAAS",
+				"This is a resource AAS.");
 
-		// create SimpleAAS object for easy storage of the product data for all
-		// submodels
-		ShopFloorAAS_Resource generator = new ShopFloorAAS_Resource(0.0, 
-        List.of(0,1),
-        List.of("12345", "23456"),
-        List.of("03-02", "04-03"),
-        List.of("Operation1", "Operation2"),
-        List.of(true, false),
-        List.of("VDI2770", "VDI2771"),
-        List.of("en", "de"),
-        List.of("V1.3", "V3.5"),
-        List.of("path of doc", "path of doc2"),
-        "ABC Company",
-        "path of png",
-        "ABC Ronot",
-        "dfsdf-sdg",
-        "path of jpg",
-        List.of("Class1", "Class2"),
-        List.of("8.0", "10.2"),
-        List.of("21-02", "52-05"),
-        "Automated",
-        3,
-        "Electric Motor",
-        5.3,
-        8.9,
-        20.6,
-        98.6,
-        0.01,
-        "path of .STEP",
-        List.of(1.0,2.0,3.0),
-        4.0,
-        6.0,
-        List.of(1.0,2.0,3.0),
-        List.of(5.0,6.0,7.0),
-        "path of jpg",
-        "revolute",
-        List.of(1.1,2.2,3.3),
-        10.0,
-        9.0,
-        10.0,
-        15.0,
-        5,
-        List.of(0,1,2),
-        List.of("Moving1","Moving2","Moving3"),
-        List.of("Moving1","Moving2","Moving3"),
-        List.of(1.1,2.2,3.3),
-        List.of(2.5,3.5,4.5),
-        List.of("Task,Moving1","Task,Moving2","Task,Moving3"));
 
-        
+        ShopFloorAAS_Resource generator = new ShopFloorAAS_Resource(0.0, 
+        List.of("EndEffector","Robot", "Gripper"), 
+        List.of(0,1), 
+        List.of(List.of("11231","11232"),List.of("21231","21232"),List.of("31231","31232")),
+        List.of(List.of("03-07","03-08"),List.of("04-07","04-08"),List.of("05-07","05-08")), 
+        List.of(List.of("Operation manual","Operation manual"),List.of("Operation manual","Operation manual"),List.of("Operation manual","Operation manual")), 
+        List.of(List.of(true,true),List.of(false,false),List.of(false,false)), 
+        List.of(List.of("VDI2271","VDI2272"),List.of("VDI2273","VDI2274"),List.of("VDI2275","VDI2276")), 
+        List.of(List.of("English","English"),List.of("Chinese","Chinese"),List.of("German","German")), 
+        List.of(List.of("V1.3","V1.4"),List.of("V2.5","V2.6"),List.of("V3.8","V3.9")), 
+        List.of(List.of("Robot operation manual","Robot operation manual"),List.of("Robot operation manual","Robot operation manual"),List.of("Robot operation manual","Robot operation manual")), 
+        List.of("Bosch", "Bosch","Bosch"), 
+        List.of("Link to a Logo image","Link to a logo image","Link to a Logo image"), 
+        List.of("Industry Robot","Industry Robot","Industry Robot"), 
+        List.of("ssdg-adfs01","ssdg-adfs01","ssdg-adfs01"), 
+        List.of("Link to a robot image","Link to a robot image","Link to a robot image"), 
+        List.of(List.of("ISO8373","ISO8373"),List.of("ISO8373","ISO8373"),List.of("ISO8373","ISO8373")), 
+        List.of(List.of("V2023","V2023"),List.of("V2023","V2023"),List.of("V2023","V2023")), 
+        List.of(List.of("C1","C1"),List.of("C1","C1"),List.of("C1","C1")), 
+        List.of(0.5,2.3,0.8), 
+        List.of("Aluminium alloys,steel","Aluminium alloys,steel","Aluminium alloys,steel"), 
+        List.of(2.0,2.5,3.0), 
+        List.of("link to a structure image","link to a structure image","link to a structure image"), 
+        List.of(1.0,1.1,1.2), 
+        List.of(List.of("100W to 150W","0m/s to 1m/s", "a link to a image show the work space", "0N to 50N","5 to 30cm","-5 to 50\u00B0C", "10 kg"),
+        List.of("100W to 150W","0m/s to 1m/s", "a link to a image show the work space", "NA","NA","-5\u00B0C to 50\u00B0C", "10 kg"),
+        List.of("100W to 150W","0m/s to 1m/s", "a link to a image show the work space", "0 to 50N","5 to 30cm","-5\u00B0C to 50\u00B0C", "10 kg")), 
+        List.of("Link to STEP.document","Link to STEP.document","Link to STEP.document"), 
+        List.of(List.of(1.0,2.0,3.0),List.of(2.1,3.2,4.3),List.of(1.5,1.2,1.3)), 
+        List.of(400.0,300.0,450.0), 
+        List.of(6.0,5.0,7.0), 
+        List.of("Position A","Position A","Position A"), 
+        List.of("Orientation A","Orientation A","Orientation A"), 
+        List.of(0,1), 
+        List.of(List.of("Pick and Place aa","Pick and Place ab"),List.of("Pick and Place ba","Pick and Place bb"),List.of("Pick and Place ca","Pick and Place cb")), 
+        List.of(List.of("Description of pick and place","Description of pick and place"),List.of("Description of pick and place","Description of pick and place"),List.of("Description of pick and place","Description of pick and place")));
+
+        // List.of(List.of(),List.of(),List.of())
 		List<Submodel> submodels = generateAndRegisterSubmodels(resourceShell, generator);
 
 		MultiSubmodelProvider fullProvider = getFullProvier(resourceShell, submodels);
